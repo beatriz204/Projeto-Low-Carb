@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Carb</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/css/estilo.css">
+
+
+</head>
+<script>
+    function cardapio() {
+        document.getElementById('fechou').click()
+        window.location.href = "#Cardapio";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function encomendas() {
+        document.getElementById('fechou').click()
+        window.location.href = "#Encomendas";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function blog() {
+        document.getElementById('fechou').click()
+        window.location.href = "#Blog";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function contato() {
+        document.getElementById('fechou').click()
+        window.location.href = "#Contato";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function index() {
+        document.getElementById('fechou').click()
+        window.location.href = "index.html";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function sobre() {
+        document.getElementById('fechou').click()
+        window.location.href = "Page/SobreNos.html";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+
+    var visibilidade = true;
+    function ocultarExibir() {
+        if (visibilidade) {
+            let troca = document.getElementById("Letras"); //fazer a leitura do que tem no ID "Letras"
+            let verificado = troca.classList.contains("none1"); // Verifica na lista de classes se tem "none1" se sim então TRUE se não FALSE
+            //se for TRUE então remove a classe "none1" e adiciona "block1"
+            if (verificado) {
+                troca.classList.remove('none1');
+                troca.classList.add('block1');
+            }
+            //se for FALSE então remova o "block1" e adiciona "none1"
+            else {
+                troca.classList.remove('block1');
+                troca.classList.add('none1');
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-3 col-md-3 col-lg-3 col-xl-3">
+                <img src="Assets/images/logocerta.png" alt="" class="logoImage">
+            </div>
+            <div class="col-9 col-md-9 col-lg-9 col-xl-9" style="align-self: center;">
+                <div class="menu1">
+                    <div> <a href="#Banner" class="menuzinho1">HOME </a></div>
+                    <div><a href="Page/SobreNos.html" class="menuzinho">SOBRE </a></div>
+                    <div><a href="#Cardapio" class="menuzinho">CARDÁPIO </a></div>
+                    <div><a href="#Encomendas" class="menuzinho">ENCOMENDAS </a></div>
+                    <div><a href="#Blog" class="menuzinho">BLOG </a></div>
+                    <div> <a href="#Contato" class="menuzinho">CONTATO </a></div>
+                </div>
+                <label class="offPC">
+                    <input type="checkbox">
+                    <span class="menu" id="fechou"> <span class="hamburger" onclick="ocultarExibir()"></span> </span>
+                    <div id="Letras" class="none1">
+                        <button onclick="index()" class="buttonMenu">HOME</button>
+                        <button onclick="sobre()" class="buttonMenu">SOBRE</button>
+                        <button onclick="cardapio()" class="buttonMenu">CARDÁPIO</button>
+                        <button onclick="encomendas()" class="buttonMenu">ENCOMENDAS</button>
+                        <button onclick="blog()" class="buttonMenu">BLOG</button>
+                        <button onclick="contato()" class="buttonMenu">CONTATO</button>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- BANNER -->
+    <div id="Banner">
+        <img src="Assets/images/banner2.png" alt="" class="banner">
+    </div>
+
+    <br>
+    <br>
+
+
+    <!-- DESTAQUES -->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col  pt-5">
+                <h1 class="h1Alimentacao">ESTILO DE ALIMENTAÇÃO </h1>
+            </div>
+            <div class="col animationCard">
+                <img src="Assets/images/icone1.png" class="img-center">
+                <h1 class="destaqH1">Low Carb </h1>
+            </div>
+            <div class="col animationCard">
+                <img src="Assets/images/icone2.png" class="img-center">
+                <h1 class="destaqH1"> Orgânico </h1>
+            </div>
+            <div class="col animationCard">
+                <img src="Assets/images/icone3.png" class="img-center">
+                <h1 class="destaqH1"> Vegan </h1>
+            </div>
+            <div class="col animationCard">
+                <img src="Assets/images/icone4.png" class="img-center">
+                <h1 class="destaqH1"> Sem Glúten </h1>
+            </div>
+            <div class="col animationCard">
+                <img src="Assets/images/icone5.png" class="img-center">
+                <h1 class="destaqH1"> Sem Lactose </h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- PRODUTOS DESTAQUES E CARDAPIO -->
+
+    <section class="pt-5 pb-5">
+        <div class="container ">
+            <div class="row " id="Cardapio">
+                <div class="col-4"> </div>
+                <div class="col-4">
+                    <h3 class="mb-3 tituloSlide">Produtos Destaques </h3>
+                </div>
+                <div class="col-4 text-right">
+                    <a class="" href="#carouselExampleIndicators2" role="" data-slide="prev">
+                        <img class="icon2" src="Assets/images/seta-esquerda.png">
+                        <!-- <i class="fa-regular fa-arrow-left"></i> -->
+                    </a>
+                    <a class="" href="#carouselExampleIndicators2" role="" data-slide="next">
+                        <img class="icon2" src="Assets/images/seta-direita.png">
+                        <!-- <i class="fa fa-arrow-right"></i> -->
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" data-interval="0">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <div class="row row row-cols-2 row-cols-sm-2">
+                                    <div class="col-md-3 mb-3 ">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100 ">
+                                            <img class="img-fluid" alt="" src="Assets/images/1.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Supercoffee 2.0 Caffeíne Army
+                                                    220g
+                                                </h4>
+                                                <p class="card-text">R$ 109,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button  position-absolute posimidia">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100" position-absolute>
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/2.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Glutamina com cúrcuma Nutrawell
+                                                    150g
+                                                </h4>
+                                                <p class="card-text">R$ 79,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute posimidia">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3 ">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100" position-absolute>
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/3.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Farinha Multiuso sem Glúten e
+                                                    sem
+                                                    Lactose Schar
+                                                    500g</h4>
+                                                <p class="card-text">R$ 14,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute ">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3 ">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100" position-absolute>
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/28.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">
+                                                    Ômega 3 EPA DHA Vitafor 1000mg com 120 cápsulas</h4>
+                                                <p class="card-text">R$ 98,00s</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute ">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+
+                                    <div class="col-md-3 mb-3 ">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/4.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Creatina Monohidratada Mundo
+                                                    Verde
+                                                    Seleção 300g
+                                                </h4>
+                                                <p class="card-text">R$ 139,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/5.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Vinagre de Maçã Orgânico Mundo
+                                                    Verde
+                                                    Seleção
+                                                    520ml</h4>
+                                                <p class="card-text">R$ 21,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute1">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/6.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Leite de Coco em Pó Mundo Verde
+                                                    Seleção 200g</h4>
+                                                <p class="card-text">R$ 39,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/26.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Maca Peruana Elixir 60 cápsulas
+                                                </h4>
+                                                <p class="card-text">R$ 39,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/7.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Farinha sem Glúten Mundo Verde
+                                                    Seleção 500g</h4>
+                                                <p class="card-text">R$ 8,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/8.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Melatz Melatonina gotas 10ml -
+                                                    EPN
+                                                </h4>
+                                                <p class="card-text">R$ 50,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/9.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Psyllium Husk Mundo Verde
+                                                    Seleção
+                                                    150g</h4>
+                                                <p class="card-text">R$ 44,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/27.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Thermo Mundo Verde Seleção 120
+                                                    cápsulas</h4>
+                                                <p class="card-text">R$ 69,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h3 class="mb-3 tituloSlide"> Essencial nutrição </h3>
+                </div>
+                <div class="col-4 text-right">
+                    <a class="" href="#carouselExampleIndicators3" role="" data-slide="prev">
+                        <img class="icon2" src="Assets/images/seta-esquerda.png">
+                        <!-- <i class="fa-regular fa-arrow-left"></i> -->
+                    </a>
+                    <a class="" href="#carouselExampleIndicators3" role="" data-slide="next">
+                        <img class="icon2" src="Assets/images/seta-direita.png">
+                        <!-- <i class="fa fa-arrow-right"></i> -->
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" data-interval="0">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/10.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Immuno Golden Whey Pro Glutath
+                                                </h4>
+                                                <p class="card-text">R$ 109,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute4">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/11.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Sweetlift Cook Adocante Culinrio
+                                                    300g - Essential
+                                                    Nutrition</h4>
+                                                <p class="card-text">R$ 63,50</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute5">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/12.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Chocolift Be Alive Berries e Açaí
+                                                    Essential
+                                                    Nutrition 40g</h4>
+                                                <p class="card-text">R$ 17,50</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/15.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Immuno Golden Whey Pro Glutath
+                                                    Essential
+                                                    Nutrition 480g</h4>
+                                                <p class="card-text">R$ 216,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute5">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/13.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Xylitol Essential Nutrition 300g
+                                                </h4>
+                                                <p class="card-text">R$ 62,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/14.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">iberlift Prebiotic Essential
+                                                    Nutrition 260g</h4>
+                                                <p class="card-text">R$ 116,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/15.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Immuno Golden Whey Pro Glutath
+                                                    Essential
+                                                    Nutrition 480g</h4>
+                                                <p class="card-text">R$ 216,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute2">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/29.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Cacao Whey Essential Nutrition 450g
+                                                </h4>
+                                                <p class="card-text">R$ 195,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/16.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Amino Greens Essential Nutrition
+                                                    30x8g</h4>
+                                                <p class="card-text">R$ 199,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/17.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">D-Ribose Energy Essential Nutrition
+                                                    30x5g</h4>
+                                                <p class="card-text">R$ 145,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/18.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">HI Whey Protein sem Sabor Essential
+                                                    Nutrition
+                                                    375g</h4>
+                                                <p class="card-text">R$ 195,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/11.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Sweetlift Cook Adocante Culinrio
+                                                    300g - Essential
+                                                    Nutrition</h4>
+                                                <p class="card-text">R$ 63,50</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute3">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"> </div>
+                <div class="col-4">
+                    <h3 class="mb-3 tituloSlide"> Low carb seleção </h3>
+                </div>
+                <div class="col-4 text-right">
+                    <a class="" href="#carouselExampleIndicators4" role="" data-slide="prev">
+                        <img class="icon2" src="Assets/images/seta-esquerda.png">
+                        <!-- <i class="fa-regular fa-arrow-left"></i> -->
+                    </a>
+                    <a class="" href="#carouselExampleIndicators4" role="" data-slide="next">
+                        <img class="icon2" src="Assets/images/seta-direita.png">
+                        <!-- <i class="fa fa-arrow-right"></i> -->
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators4" class="carousel slide" data-ride="carousel" data-interval="0">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/19.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Farinha sem Glúten Mundo Verde
+                                                    Seleção 500g</h4>
+                                                <p class="card-text ">R$ 8,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/20.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Mel Orgânico Mundo Verde Seleção
+                                                    300g</h4>
+                                                <p class="card-text ">R$ 19,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/21.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Coco Aminos Mundo Verde Seleção
+                                                    200ml</h4>
+                                                <p class="card-text ">R$ 19,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/28.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">
+                                                    Ômega 3 EPA DHA Vitafor 1000mg com 120 cápsulas</h4>
+                                                <p class="card-text ">R$ 98,00s</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/22.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Vinagre de Maçã Orgânico Mundo Verde
+                                                    Seleção
+                                                    520ml</h4>
+                                                <p class="card-tex ">R$ 21,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute6">comprar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/23.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Néctar de Coco Mundo Verde Seleção
+                                                    200ml</h4>
+                                                <p class="card-text ">R$ 21,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/27.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Thermo Mundo Verde Seleção 120
+                                                    cápsulas</h4>
+                                                <p class="card-text ">R$ 69,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/24.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Superfood Cacau em Pó Mundo Verde
+                                                    Seleção 150g
+                                                </h4>
+                                                <p class="card-text ">R$ 9,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row row row-cols-2 row-cols-sm-2">
+
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/25.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Manteiga Ghee com Sal do Himalaia
+                                                    Mundo Verde
+                                                    Seleção 300g</h4>
+                                                <p class="card-text ">R$ 42,50</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute7">comprar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/4.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Creatina Monohidratada Mundo Verde
+                                                    Seleção 300g
+                                                </h4>
+                                                <p class="card-text ">R$ 139,90</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/8.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Melatz Melatonina gotas 10ml - EPN
+                                                </h4>
+                                                <p class="card-text">R$ 50,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute8">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card shadow-sm p-3 mb-5 bg-body rounded h-100">
+                                            <img class="img-fluid" alt="100%x280" src="Assets/images/1.png">
+                                            <div class="card-body">
+                                                <h4 class="card-title escritaSlide">Supercoffee 2.0 Caffeíne Army 220g
+                                                </h4>
+                                                <p class="card-text">R$ 109,00</p>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg button position-absolute8">comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid fundoPedido" id="Encomendas">
+        <div class="row espacolateral">
+            <div class="col-12 col-xxl-6 col-lg-6 col-xl-6 espacamento">
+
+                <h1 class="h1Personalizado">Faça seu pedido online via WhatsApp</h1>
+                <br>
+                <p class="pPersonalizado">Você pode fazer seu pedido online via WhatsApp e chega muito rapido, podendo
+                    pagar via maquininha,pix,boleto todas formas de pagamentos</p>
+                <p></p>
+                <p class="pPersonalizado">Tambem aceitamos pagamentos após sua compra, você pode comprar nosso produto
+                    ultilizar e apenas depois que for eficaz você paga pelo que comprou</p>
+                <br>
+                <button class="botaoWhats">Faça seu pedido aqui !</button>
+            </div>
+            <div class="col-12 col-xxl-6 col-lg-6 col-xl-6">
+                <div>
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_vtaqleiq.json"
+                        background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay
+                        class="lottie-player">
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="blog" id="Blog">
+
+        <div class="escritaBlog">
+
+            <h1 class="tituloBlog1">RECEITAS E INSPIRAÇÃO</h1>
+            <p class="pBlog">Obtenha receitas aprovadas por nutricionistas e dicas motivacionais de treinos de
+                especialistas do Low Carb</p>
+
+        </div>
+
+
+
+        <div class="cardblog">
+            <div class="card-group formaCard">
+                <div class="card espacoCard">
+                    <a href="Blog/blog1.html" class="Ablog">
+                        <img src="Assets/images/blog1.png" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title tituloBlog">10 cafés da manhã com menos de 300 caloria...</h5>
+
+                            <p class="card-text"><small class="text-muted">Blog do Low Carb</small></p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card espacoCard">
+                    <a href="Blog/blog2.html" class="Ablog">
+                        <img src="Assets/images/blog2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title tituloBlog">Como identificar a dieta de 1.200 calorias</h5>
+
+                            <p class="card-text"><small class="text-muted">Blog do Low Carb</small></p>
+                        </div>
+                    </a>
+                </div>
+                </a>
+
+                <div class="card espacoCard">
+                    <a href="Blog/blog3.html" class="Ablog">
+                        <img src="Assets/images/blog3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title tituloBlog">Guia essencial para não ficar parado</h5>
+
+                            <p class="card-text"><small class="text-muted">Blog do Low Carb</small></p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section>
+        <div class="container-fluid contato" id="Contato">
+            <div class="row espacolateral">
+                <div class="col-12 col-lg-6 col-xl-6 espacamento2">
+
+                    <h1 class="faleConosco">FALE CONOSCO</h1>
+
+                    <div class="mb-3">
+
+
+                        <label for="exampleFormControlInput1" class="form-label textForm asteFlex">Nome <p
+                                class="corAste">*</p></label>
+
+                        <input type="email" class="form-control inputContato" id="exampleFormControlInput1">
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label textForm asteFlex">Email <p
+                                class="corAste">*</p></label>
+
+                        <input type="email" class="form-control inputContato" id="exampleFormControlInput1">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label textForm asteFlex">Mensagem <p
+                                class="corAste">*</p></label>
+                        <textarea class="form-control inputContato" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3 espacoTop">
+                        <button class="botaoForm"> enviar</button>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6 col-xl-6 mapa">
+
+                    <h1 class="Encontrar">ONDE NOS ECONTRAR</h1>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14305.242817635464!2d-48.8485175!3d-26.3164368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea73d5d93037f364!2sByll%20Ag%C3%AAncia%20de%20Marketing%20Digital!5e0!3m2!1spt-BR!2sbr!4v1650640703088!5m2!1spt-BR!2sbr"
+                        width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="mapaMidia"></iframe>
+
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="redeConta">
+                                    <div class="d-flex">
+                                        <img class="imgIcone" src="Assets/images/email (1).png">
+                                        <p>falecom@byll.com.br</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img class="imgIcone" src="Assets/images/whatsapp (1).png">
+                                        <a href="https://api.whatsapp.com/send?phone=554738040931&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                                            class="redeConta">
+                                            <p>(47)38040931</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <div class="d-flex">
+                                        <img class="imgIcone" src="Assets/images/instagram (3).png">
+                                        <a href="https://www.instagram.com/byll.marketing.digital/" class="redeConta">
+                                            <p>@byll.marketing.digital</p>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img class="imgIcone" src="Assets/images/facebook.png">
+                                        <a href="https://www.facebook.com/byll.marketing.digital/" class="redeConta">
+                                            <p>Byll Agência de Marketing Digital</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid fundoFooter">
+        <div class="row espacoFooter">
+            <div class="col-12  col-lg-4 col-xl-4 text-center">
+                <img src="Assets/images/logocerta.png" alt="" class="logoFooter">
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4">
+                <span><b class="fs-5">ATENDIMENTO</b></span>
+                <div class="d-flex">
+                    <span><b>E-mail:</b> falecom@byll.com.br</span>
+                </div>
+                <div class="d-flex">
+                    <span><b>WhatsApp:</b> (47)9 3804-0931</span>
+                </div>
+                <div>
+                    <span><b>Localização:</b> R. Rio Grande do Sul,891-sala07-Anita Garibaldi, Joinville - SC</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4 a">
+                <div><b class="fs-5">SOBRE NÓS</b></div>
+                <div class="">
+                    <p> esforçamos ao máximo para colocar os desejos dos nossos clientes em primeiro lugar. Foi assim
+                        que
+                        construímos a nossa história, e é por isso que temos orgulho de fazer parte do mercado de
+                        Alimentação Saudável.</p>
+                </div>
+                <a href="https://www.facebook.com/byll.marketing.digital/"> <img class="imgIcone"
+                        src="Assets/images/facebook.png"> </a>
+                <a href="https://www.instagram.com/byll.marketing.digital/"> <img class="imgIcone"
+                        src="Assets/images/instagram (3).png"> </a>
+                <a href="https://www.linkedin.com/company/byll-ag%C3%AAncia-de-marketing-digital/"></a> <img
+                    class="imgIcone" src="Assets/images/linkedin.png" alt=""> </a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+
+</body>
+
+</html>

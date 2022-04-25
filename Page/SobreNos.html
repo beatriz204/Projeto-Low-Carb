@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Low Carb</title>
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Assets/css/estilo.css">
+    </head>
+
+</head>
+<script>
+
+function cardapio() {
+        document.getElementById('fechou').click()
+        window.location.href = "../index.html#Cardapio";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function encomendas() {
+        document.getElementById('fechou').click()
+        window.location.href = "../index.html#Encomendas";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function blog() {
+        document.getElementById('fechou').click()
+        window.location.href = "../index.html#Blog";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function contato() {
+        document.getElementById('fechou').click()
+        window.location.href = "../index.html#Contato";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function index() {
+        document.getElementById('fechou').click()
+        window.location.href = "../index.html";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+    function sobre() {
+        document.getElementById('fechou').click()
+        window.location.href = "SobreNos.html";
+        let Letras = document.getElementById("Letras");
+        Letras.classList.add('none1');
+        Letras.classList.remove('block1')
+    }
+
+    var visibilidade = true;
+    function ocultarExibir() {
+        if (visibilidade) {
+            let troca = document.getElementById("Letras"); //fazer a leitura do que tem no ID "Letras"
+            let verificado = troca.classList.contains("none1"); // Verifica na lista de classes se tem "none1" se sim então TRUE se não FALSE
+            //se for TRUE então remove a classe "none1" e adiciona "block1"
+            if (verificado) {
+                troca.classList.remove('none1');
+                troca.classList.add('block1');
+            } 
+            //se for FALSE então remova o "block1" e adiciona "none1"
+            else {
+                troca.classList.remove('block1');
+                troca.classList.add('none1');
+            }
+        }
+    }
+
+</script>
+<body class="fundoCinza">
+
+
+
+    <header class="container-fluid header">
+        <div class="row">
+            <div class="col-3 col-md-3 col-lg-3 col-xl-3">
+                <img src="../Assets/images/logocerta.png" alt="" class="logoImage">
+            </div>
+            <div class="col-9 col-md-9 col-lg-9 col-xl-9" style="align-self: center;">
+                <div class="menu1">
+                    <div> <a href="../index.html" class="menuzinho1">HOME </a></div>
+                    <div><a href="SobreNos.html" class="menuzinho">SOBRE </a></div>
+                    <div><a href="../index.html#Cardapio" class="menuzinho">CARDÁPIO </a></div>
+                    <div><a href="../index.html#Encomendas" class="menuzinho">ENCOMENDAS </a></div>
+                    <div><a href="../index.html#Blog" class="menuzinho">BLOG </a></div>
+                    <div> <a href="../index.html#Contato" class="menuzinho">CONTATO </a></div>
+                </div>
+                <label class="offPC">
+                    <input type="checkbox">
+                    <span class="menu" id="fechou"> <span class="hamburger" onclick="ocultarExibir()"></span> </span>
+                    <div id="Letras" class="none1">
+                      <button onclick="index()" class="buttonMenu">HOME</button> 
+                       <button onclick="sobre()" class="buttonMenu">SOBRE</button> 
+                       <button onclick="cardapio()" class="buttonMenu">CARDÁPIO</button> 
+                       <button onclick="encomendas()" class="buttonMenu">ENCOMENDAS</button>
+                        <button onclick="blog()" class="buttonMenu">BLOG</button> 
+                      <button onclick="contato()" class="buttonMenu">CONTATO</button>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+ 
+
+
+
+    <h1 class="sobreTitulo">SOBRE NÓS</h1>
+
+    <div class="sobre container-md">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="">
+                    <img class="equipe1 rounded mx-auto d-block " src="../Assets/images/equipe1.png">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="sobreescrita sobrecor">
+                    <h1 class="sobreEscritah1">OBJETIVO</h1>
+                    <p> Oi, nós somos a Low Carb!
+
+                        O nosso objetivo o principal? Oferecer os melhores Produtos saudáveis que você já viu. Nós
+                        não
+                        nascemos ontem, e por isso mesmo já descobrimos a melhor maneira de vender os melhores produtos
+                        do
+                        mercado a preços extremamente amigáveis. O melhor de tudo? Fazemos questão de oferecer um
+                        excelente
+                        atendimento ao cliente.
+                        Além disso, estamos sempre de olho nas tendências mais recentes na categoria de produtos fitness
+                        – e
+                        nos
+                        esforçamos ao máximo para colocar os desejos dos nossos clientes em primeiro lugar. Foi assim
+                        que
+                        construímos a nossa história, e é por isso que temos orgulho de fazer parte do mercado de
+                        Alimentação Saudável.
+                        Por último, gostaríamos de afirmar que a nossa principal prioridade é você, o nosso cliente.
+                        Esperamos que você desfrute da experiência de compra que preparamos com tanto carinho.</p>
+                    <div>
+                        <a href="SobreNos.html#timeline1"><button class="botaoSobre"><i class="fa fa-plus"></i>
+                                VER LINHA DO TEMPO
+                            </button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section id="timeline">
+        <div class="demo-card-wrapper">
+            <div class="demo-card demo-card--step1" id="timeline1">
+                <div class="head">
+                    <div class="number-box">
+                        <span>01</span>
+                    </div>
+                    <h2> Início produção em casa</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
+                        consequatur, laudantium odio dolorum laboriosam.</p>
+                    <img src="../Assets/images/casa.png" alt="Graphic">
+                </div>
+            </div>
+            <div class="demo-card demo-card--step2">
+                <div class="head">
+                    <div class="number-box">
+                        <span>02</span>
+                    </div>
+                    <h2> Começo vendas onlinne</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
+                        consequatur, laudantium odio dolorum laboriosam.</p>
+                    <img src="../Assets/images/pedidoon.png" alt="Graphic">
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step3">
+                <div class="head">
+                    <div class="number-box">
+                        <span>03</span>
+                    </div>
+                    <h2> Primeira empresa física</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
+                        consequatur, laudantium odio dolorum laboriosam.</p>
+                    <img src="../Assets/images/empresa.png" alt="Graphic">
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step4">
+                <div class="head">
+                    <div class="number-box">
+                        <span>04</span>
+                    </div>
+                    <h2> Reforma da empresa</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
+                        consequatur, laudantium odio dolorum laboriosam.</p>
+                    <img src="../Assets/images/reforma.png" alt="Graphic">
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step5">
+                <div class="head">
+                    <div class="number-box">
+                        <span>05</span>
+                    </div>
+                    <h2> Novas sedes</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
+                        consequatur, laudantium odio dolorum laboriosam.</p>
+                    <img src="../Assets/images/sede.png" alt="Graphic">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid fundoFooter">
+        <div class="row espacoFooter">
+            <div class="col-12  col-lg-4 col-xl-4 text-center">
+                <img src="../Assets/images/logocerta.png" alt="" class="logoFooter">
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4">
+                <span><b class="fs-5">ATENDIMENTO</b></span>
+                <div class="d-flex">
+                    <span><b>E-mail:</b> falecom@byll.com.br</span>
+                </div>
+                <div class="d-flex">
+                    <span><b>WhatsApp:</b> (47)9 3804-0931</span>
+                </div>
+                <div>
+                    <span><b>Localização:</b> R. Rio Grande do Sul,891-sala07-Anita Garibaldi, Joinville - SC</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4 a">
+                <div><b class="fs-5">SOBRE NÓS</b></div>
+                <div class="">
+                    <p> esforçamos ao máximo para colocar os desejos dos nossos clientes em primeiro lugar. Foi assim
+                        que
+                        construímos a nossa história, e é por isso que temos orgulho de fazer parte do mercado de
+                        Alimentação Saudável.</p>
+                </div>
+                <a href="https://www.facebook.com/byll.marketing.digital/"> <img class="imgIcone"
+                        src="../Assets/images/facebook.png"> </a>
+                <a href="https://www.instagram.com/byll.marketing.digital/"> <img class="imgIcone"
+                        src="../Assets/images/instagram (3).png"> </a>
+                <a href="https://www.linkedin.com/company/byll-ag%C3%AAncia-de-marketing-digital/"></a> <img
+                    class="imgIcone" src="../Assets/images/linkedin.png" alt=""> </a>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
